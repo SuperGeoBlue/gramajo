@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramajo</title>
+    <link rel="icon" type="image/jpeg" href="https://i.imgur.com/GjKa9Qx.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .banner {
+            width: 100%;
+            height: 750px;
+            background-image: url('https://i.imgur.com/aMEDqhh.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: 250px;
+            background-image: url('https://i.imgur.com/C2VbJPs.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            color: white;
+            background: none;
+            border: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-toggle img {
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .image-description {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .image-description img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer .footer-image-container {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+        }
+
+        .footer .footer-image-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease;
+            max-width: none;
+        }
+
+        .footer .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .contact {
+            margin-top: 10px;
+        }
+
+        .footer .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copyright {
+            margin-top: 10px;
+        }
+
+        body.light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        body.light-theme .navbar {
+            background-color: #ddd;
+        }
+
+        body.light-theme .navbar a {
+            color: black;
+        }
+
+        body.light-theme .theme-toggle {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner"></div>
+    <a href="Gramajo - home.html">
+        <div class="logo"></div>
+    </a>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="about.html">Acerca de mí</a></li>
+            <li><a href="streams.html">Mis streams</a></li>
+            <li><a href="collaborations.html">Colaboraciones</a></li>
+            <li><a href="fanart.html">Fan Arts</a></li>
+            <li><a href="credits.html">Créditos</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()">
+        </button>
+    </div>
+    <div class="content">
+        <section id="credits" class="section">      
+            <h1>CRÉDITOS</h1>
+                <p>Bien, para finalizar, aquí colocaremos a TODOS los que apoyaron, brindaron su apoyo y compartieron parte de su estilo artístico para crear ésta página:
+                    <br><br><br><br>
+                    <h2>Representante:</h2>
+                    <ul>
+                        <li>
+                            <a href="https://x.com/Gr4majo">@Gramajo</a> como: <b>Representante OFICIAL de la página y creador de contenido principalmente de Dragon Ball.</b>
+                        </li>
+                    </ul>
+                    <br><br><br><br>
+                    <h3><b>Artistas:</b></h3>
+                <ul>
+                    <li>
+                        <a href="https://x.com/Akira_Nevermind">@Akira_Nevermind</a> como: Artista para el logo de la pestaña y logo de "Gramajo" (véase en la parte superior izquierda).<br><br>
+                    </li>
+                    <li>
+                        <a href="https://x.com/Chrisst099">@Spiderking (Twitter)</a> y 
+                        <a href="https://www.instagram.com/chriss9700/">@Spiderking (Instagram)</a> como: Artista de banner representativo para Gramajo y la comunidad.<br><br>
+                    </li>
+                    <li>
+                        @Nailuj como: Artista representativo para el arte de las secciones de:
+                        <ul>
+                            <li>
+                                Página principal (Lobby).
+                            </li>
+                            <li>
+                                Acerca de mí.
+                            </li>
+                            <li>
+                                Mis streams.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                    <br><br><br><br><br><br>
+                    <h3><b>Editores:</b></h3>
+                <ul>
+                    <li>
+                        <a href="https://x.com/Actus_Gr4majo">@SuperGeo</a> como: Editor y organizador principal del proyecto.<br><br>
+                    </li>
+                    <li>
+                        <a href="https://x.com/Hacker28Yt">@Hacker28</a> como: Artista principal dentro de la comunidad y cooperador de ideas hacia la página.<br><br>
+                    </li>
+                    <li>
+                        <a href="https://x.com/sanfry2111">@sanfry2111</a> como: Co-organizador de la página, inspector de ideas y sugerencias, además de cantante.<br><br>
+                    </li>
+                    <li>
+                        <a href="https://x.com/Spark485_SSJ">@Spark485_SSJ</a> como: Co-organizador, moderador por excelencia, al igual que es editor del video mostrando el proceso y paso a paso de la página.<br><br>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer">
+        <div class="footer-image-container">
+            <img src="https://i.imgur.com/6atBCgm.png" alt="@Gr4majo">
+        </div>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@gr4majo">TikTok</a>
+            <a href="https://www.instagram.com/gramajodb/">Instagram</a>
+            <a href="https://www.twitter.com/@Gr4majo">Twitter</a>
+            <a href="https://discord.com/invite/csAkKRVDqN">Discord</a>
+        </div>
+        <div class="contact">
+            Contacta con Gramajo para propuestas de videos, promociones o colaboraciones aquí:<br><a href="mailto:contacto.gramajo@gmail.com">contacto.gramajo@gmail.com</a><br><br>
+            Contacta con SuperGeo sobre promociones, creaciones, peticiones, sugerencias y comisiones aquí:<br><a href="mailto:geocuant@gmail.com">geocuant@gmail.com</a>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Gramajo. Todos los derechos reservados.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            body.classList.add('light-theme'); // Añadir la clase light-theme por defecto
+
+            const themeToggle = document.querySelector('.theme-toggle');
+            const themeText = document.createElement('span');
+            const themeIcon = document.createElement('img');
+
+            themeText.textContent = 'Oscuro';
+                themeIcon.src = 'https://i.imgur.com/yNM192t.png'; // Ruta de tu icono de luna
+            themeIcon.alt = 'Icono de luna';
+            themeToggle.appendChild(themeText);
+            themeToggle.appendChild(themeIcon);
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-theme');
+                if (body.classList.contains('light-theme')) {
+                    themeText.textContent = 'Oscuro';
+                themeIcon.src = 'https://i.imgur.com/yNM192t.png'; // Ruta de tu icono de luna
+                    themeIcon.alt = 'Icono de luna';
+                } else {
+                    themeText.textContent = 'Claro';
+                themeIcon.src = 'https://i.imgur.com/84rBTwQ.png'; // Ruta de tu icono de sol
+                    themeIcon.alt = 'Icono de sol';
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const footerImage = document.querySelector('.footer .footer-image-container img');
+            const rect = footerImage.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                footerImage.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            } else {
+                footerImage.style.transform = 'translate(-50%, -50%) scale(1)';
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
